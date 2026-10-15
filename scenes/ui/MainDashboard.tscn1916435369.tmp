@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cwm52p6730on4"]
+
+[ext_resource type="Script" uid="uid://ypw71du1h6d4" path="res://scripts/ui/MainDashboard.gd" id="1_teh7u"]
+[ext_resource type="Script" uid="uid://lnp4irxka6fu" path="res://scripts/combat/ArenaRunner.gd" id="2_cmo0v"]
+
+[node name="MainDashboard" type="Control" unique_id=1023495790]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_teh7u")
+
+[node name="Arena" type="Control" parent="." unique_id=366191566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_cmo0v")
+
+[node name="BackgroundScroller" type="TextureRect" parent="Arena" unique_id=1912429553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerNode" type="Node2D" parent="Arena" unique_id=1890769412]
+
+[node name="EnemyNode" type="Node2D" parent="Arena" unique_id=809850538]
+
+[node name="BottomNavigationBar" type="PanelContainer" parent="." unique_id=1442545944]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BottomNavigationBar" unique_id=1183905801]
+layout_mode = 2
+
+[node name="MapButton" type="Button" parent="BottomNavigationBar/HBoxContainer" unique_id=1063126656]
+layout_mode = 2
+text = "Map"
+
+[node name="SkillsButton" type="Button" parent="BottomNavigationBar/HBoxContainer" unique_id=1406838703]
+layout_mode = 2
+text = "Skills"
+
+[node name="InventoryButton" type="Button" parent="BottomNavigationBar/HBoxContainer" unique_id=370728947]
+layout_mode = 2
+text = "Inventory"
+
+[node name="RightDrawerPanel" type="PanelContainer" parent="." unique_id=326326028]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightDrawerPanel" unique_id=1702992844]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="RightDrawerPanel/VBoxContainer" unique_id=150866258]
+layout_mode = 2
+
+[node name="PanelTitle" type="Label" parent="RightDrawerPanel/VBoxContainer/Header" unique_id=1993548751]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseButton" type="Button" parent="RightDrawerPanel/VBoxContainer/Header" unique_id=487649766]
+layout_mode = 2
+text = "X"
+
+[node name="DynamicContent" type="MarginContainer" parent="RightDrawerPanel/VBoxContainer" unique_id=1254525731]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MapView" type="Control" parent="RightDrawerPanel/VBoxContainer/DynamicContent" unique_id=1822399015]
+layout_mode = 2
+
+[node name="SkillsView" type="Control" parent="RightDrawerPanel/VBoxContainer/DynamicContent" unique_id=1678294136]
+layout_mode = 2
+
+[node name="InventoryView" type="Control" parent="RightDrawerPanel/VBoxContainer/DynamicContent" unique_id=1101344414]
+layout_mode = 2

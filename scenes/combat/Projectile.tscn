@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dhk8vlpk0fk4r"]
+
+[ext_resource type="Script" uid="uid://lobfqgh3urck" path="res://scripts/combat/Projectile.gd" id="1_rgbsv"]
+[ext_resource type="Texture2D" uid="uid://vpdf2k3o4uoh" path="res://icon.svg" id="2_1jo0v"]
+
+[node name="Projectile" type="Node2D" unique_id=723756707]
+script = ExtResource("1_rgbsv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1700224335]
+texture = ExtResource("2_1jo0v")
